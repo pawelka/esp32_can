@@ -6,7 +6,7 @@
 
 //Set these to the proper pin numbers for you board. Set by default to correct for EVTV ESP32-Due
              //rxpin       txpin
-ESP32CAN __attribute__((weak)) CAN0(GPIO_NUM_16, GPIO_NUM_17) ;
+ESP32CAN __attribute__((weak)) CAN0(GPIO_NUM_13, GPIO_NUM_14) ;
 
 //Select and uncomment the proper module you've got connected via SPI
             //CS, INT
