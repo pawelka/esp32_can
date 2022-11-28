@@ -141,10 +141,10 @@ BaseType_t IRAM_ATTR CAN_read_frame()
     else
     {
         //Get Message ID
-        __frame.MsgID = (((uint32_t)twaiFrame.standard.id[0] << 21) | \
-													(twaiFrame.standard.id[1] << 13) | \
-													(twaiFrame.standard.id[2] << 5) | \
-													(twaiFrame.standard.id[3] >> 3 ));
+        __frame.MsgID = (((uint32_t)twaiFrame.extended.id[0] << 21) | \
+													(twaiFrame.extended.id[1] << 13) | \
+													(twaiFrame.extended.id[2] << 5) | \
+													(twaiFrame.extended.id[3] >> 3 ));
 
         //deep copy data bytes
         for(__byte_i=0;__byte_i < __frame.FIR.B.DLC; __byte_i++)
